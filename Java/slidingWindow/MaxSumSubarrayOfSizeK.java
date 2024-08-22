@@ -1,4 +1,4 @@
-package Java.slidingWindow;
+package slidingWindow;
 
 public class MaxSumSubarrayOfSizeK {
 

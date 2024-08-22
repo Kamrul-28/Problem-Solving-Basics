@@ -1,4 +1,4 @@
-package Java.linkedList;
+package linkedList;
 
 public class LinkedList{
     ListNode head;

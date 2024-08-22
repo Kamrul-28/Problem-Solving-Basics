@@ -1,7 +1,5 @@
 package BinarySearchTree;
 
-import javax.swing.tree.TreeNode;
-
 public class BinarySearchTree {
     static class  Node{
         int data;

@@ -6,7 +6,7 @@ import java.util.HashMap;
  */
 class Q3TwoSum {
     public static void main(String[] args){
-        int[] nums = new int[]{2,7,11,15};
+        int[] nums = new int[]{2,11,7,15};
         Integer target = 9;
         for(int num:twoSum1(nums,target)){
             System.out.println(num);
@@ -14,6 +14,10 @@ class Q3TwoSum {
         
     }
 
+    /**
+     * Time Complexity: O(n)
+     * Space Cpmplexity: O(n)
+     */
     public static int[] twoSum(int[] nums, int target) {
        HashMap<Integer,Integer> map = new HashMap<>();
        for(int i=0;i<nums.length;i++){
@@ -27,15 +31,18 @@ class Q3TwoSum {
        return new int[]{};
     }
 
+    /**
+     * Time Complexity: O(n^2)
+     * Space Cpmplexity: O(1)
+     */
     public static int[] twoSum1(int[] nums, int target) {
         for(int i=1;i<nums.length;i++){
             for(int j=i;j<nums.length;j++){
-                if(nums[j]+nums[j-1] == target){
-                    return new int[]{j,j-1};
+                if(nums[j]+nums[j-i] == target){
+                    return new int[]{j-i,j};
                 }
             }
         }
-
         return new int[]{};
      }
 }
